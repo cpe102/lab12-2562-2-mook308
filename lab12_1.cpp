@@ -18,3 +18,20 @@ int main()
 }
 
 //Write definition of stat() here 
+void stat(const double x[],int y,double z[]){
+    double max=x[0],min=x[0],sum =0,d=0,f;
+    for(int i;i<y;i++){
+        if(x[i]>max)max=x[i];
+        if(x[i]<min)min=x[i];
+        sum+=x[i];
+        d+=pow(x[i],2);
+    }
+    z[2]=max;
+    z[3]=min;
+    z[0]=sum/y;
+    f=(d/y)-pow(z[0],2);
+    z[1]=sqrt(f);
+
+    
+
+}
